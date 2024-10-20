@@ -1,0 +1,181 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: #f7f8fc; /* Light background for better contrast */
+    color: #333; /* Darker text for readability */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-y: auto;
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #444; /* Softer text color */
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+/* Card Layout */
+.card-container {
+    display: flex;
+    gap: 20px;
+    width: 100%;  /* Full width for responsiveness */
+    max-width: 1200px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 40px;
+}
+
+/* Card Styling */
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Animation for hover effect */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Styling */
+form label, form input {
+    display: block;
+    width: 90%;
+    margin: 10px auto;
+    color: #555; /* Softer form label color */
+}
+
+form input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    background: #00b894; /* Calmer green */
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background: #019474;
+    transform: scale(1.05);
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-x: auto; /* Prevent overflow */
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+    font-size: 14px;
+    color: #555;
+}
+
+th {
+    background: #0984e3; /* Softer blue */
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+td {
+    background: #f1f2f6;
+    text-align: center;
+}
+
+td button {
+    background-color: #d63031; /* Softer red for delete */
+    padding: 8px 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+    transition: background 0.3s, transform 0.3s;
+}
+
+td button:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);
+}
+
+/* Table Row Hover Effect */
+tbody tr:hover {
+    background-color: #dfe6e9; /* Softer highlight on hover */
+}
+
+/* Animations */
+.card {
+    animation: fadeInUp 0.5s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+        max-width: 100%;  /* Cards take full width on smaller screens */
+        margin-bottom: 20px;
+    }
+
+    header {
+        font-size: 20px;  /* Reduce header size for smaller screens */
+    }
+
+    form input, button {
+        font-size: 14px;  /* Adjust input and button text size for small screens */
+    }
+
+    th, td {
+        padding: 8px;
+        font-size: 12px;  /* Reduce table padding and font size for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        font-size: 18px;  /* Further reduce header size for very small screens */
+    }
+
+    th, td {
+        font-size: 10px;  /* Reduce table font size for very small screens */
+    }
+}
